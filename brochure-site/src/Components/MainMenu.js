@@ -68,8 +68,8 @@ function MainMenu() {
           <h1
             className={
               centerMenuButton
-                ? "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl"
-                : "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl md:text-left"
+                ? "text-center text-transparent font-rowdies text-6xl bg-gradient-to-r from-yellow-300 to-orange-400 md:text-7xl bg-clip-text"
+                : "text-center text-transparent font-rowdies text-6xl md:text-7xl md:text-left bg-gradient-to-r from-yellow-300 to-orange-400  bg-clip-text inline-block"
             }
           >
             Goldenbird
