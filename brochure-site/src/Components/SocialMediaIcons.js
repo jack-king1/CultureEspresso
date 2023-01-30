@@ -7,14 +7,26 @@ import UilEnvelope from "@iconscout/react-unicons/icons/uil-envelope";
 function SocialMediaIcons() {
   return (
     <div className="flex items-center flex-1 justify-end">
-      <UilFacebook className="hover:cursor-pointer" size="30" color="#2C2C2C" />
-      <UilInstagram
-        className="hover:cursor-pointer"
+      <UilFacebook
+        className="hover:cursor-pointer hover:bg-yellow-200"
         size="30"
         color="#2C2C2C"
       />
-      <UilYoutube className="hover:cursor-pointer" size="30" color="#2C2C2C" />
-      <UilEnvelope className="hover:cursor-pointer" size="30" color="#2C2C2C" />
+      <UilInstagram
+        className="hover:cursor-pointer hover:bg-yellow-200"
+        size="30"
+        color="#2C2C2C"
+      />
+      <UilYoutube
+        className="hover:cursor-pointer hover:bg-yellow-200"
+        size="30"
+        color="#2C2C2C"
+      />
+      <UilEnvelope
+        className="hover:cursor-pointer hover:bg-yellow-200"
+        size="30"
+        color="#2C2C2C"
+      />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import HamburgerBtn from "./HamburgerBtn";
 
 import MenuItems from "./MenuItems";
+import MobileMenu from "./MobileMenu";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 function MainMenu() {
@@ -21,6 +22,7 @@ function MainMenu() {
   useEffect(() => {
     if (screenWidth < 1440) {
       setCenterMenuButtons(true);
+      setMenuState(false);
     } else {
       setCenterMenuButtons(false);
     }
@@ -47,35 +49,44 @@ function MainMenu() {
     setMenuState(!menuState);
   };
 
+  const RenderMenu = () => {
+    if (menuState && screenWidth < 1440) {
+      return <MobileMenu />;
+    }
+  };
+
   return (
-    <div className="flex mx-auto pt-4 md:justify-between max-w-[80%]">
-      <div
-        className={
-          centerMenuButton
-            ? "flex-grow items-center justify-end"
-            : "md:flex-grow items-center md:flex-1"
-        }
-      >
-        <h1
+    <div>
+      <div className="flex mx-auto pt-4 md:justify-between max-w-[90%]">
+        <div
           className={
             centerMenuButton
-              ? "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl"
-              : "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl md:text-left"
+              ? "flex-grow items-center justify-end"
+              : "md:flex-grow items-center md:flex-1"
           }
         >
-          Goldenbird
-        </h1>
+          <h1
+            className={
+              centerMenuButton
+                ? "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl"
+                : "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl md:text-left"
+            }
+          >
+            Goldenbird
+          </h1>
+        </div>
+        <nav
+          className={
+            centerMenuButton
+              ? "flex justify-end space-x-2 items-center"
+              : "flex justify-end space-x-2 md:justify-center md:flex-1 items-center"
+          }
+        >
+          {GetMenu()}
+        </nav>
+        {GetSocials()}
       </div>
-      <nav
-        className={
-          centerMenuButton
-            ? "flex justify-end space-x-2 items-center"
-            : "flex justify-end space-x-2 md:justify-center md:flex-1 items-center"
-        }
-      >
-        {GetMenu()}
-      </nav>
-      {GetSocials()}
+      <div>{RenderMenu()}</div>
     </div>
   );
 }
