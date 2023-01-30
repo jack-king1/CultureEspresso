@@ -1,38 +1,81 @@
-import React from "react";
-import UilFacebook from "@iconscout/react-unicons/icons/uil-facebook";
+import React, { useState, useEffect, useRef } from "react";
+import HamburgerBtn from "./HamburgerBtn";
+
+import MenuItems from "./MenuItems";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 function MainMenu() {
+  //React event on screen size change,
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [menuState, setMenuState] = useState(false);
+  const [centerMenuButton, setCenterMenuButtons] = useState(false);
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (screenWidth < 1440) {
+      setCenterMenuButtons(true);
+    } else {
+      setCenterMenuButtons(false);
+    }
+  }, [screenWidth]);
+
+  const GetMenu = () => {
+    if (screenWidth >= 1440) {
+      return <MenuItems />;
+    } else {
+      //return burger menu
+      return <HamburgerBtn HandleMenuBtn={HandleMenuBtn} />;
+    }
+  };
+
+  const GetSocials = () => {
+    if (screenWidth >= 1440) {
+      return <SocialMediaIcons />;
+    }
+  };
+
+  //Handles the burger meni icon
+  const HandleMenuBtn = () => {
+    console.log(menuState + " is the current state");
+    setMenuState(!menuState);
+  };
+
   return (
-    <div>
-      <nav class="flex justify-center space-x-4">
-        <a
-          href="/Home"
-          class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+    <div className="flex mx-auto pt-4 md:justify-between max-w-[80%]">
+      <div
+        className={
+          centerMenuButton
+            ? "flex-grow items-center justify-end"
+            : "md:flex-grow items-center md:flex-1"
+        }
+      >
+        <h1
+          className={
+            centerMenuButton
+              ? "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl"
+              : "text-center text-yellow-300 font-rowdies text-5xl md:text-6xl md:text-left"
+          }
         >
-          Home
-        </a>
-        <a
-          href="/About"
-          class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
-        >
-          About
-        </a>
-        <a
-          href="/Contact"
-          class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
-        >
-          Contact
-        </a>
-        <a
-          href="/Menu"
-          class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
-        >
-          Contact
-        </a>
-      </nav>
-      <div className="">
-        <UilFacebook size="80" color="#61d" />
+          Goldenbird
+        </h1>
       </div>
+      <nav
+        className={
+          centerMenuButton
+            ? "flex justify-end space-x-2 items-center"
+            : "flex justify-end space-x-2 md:justify-center md:flex-1 items-center"
+        }
+      >
+        {GetMenu()}
+      </nav>
+      {GetSocials()}
     </div>
   );
 }
