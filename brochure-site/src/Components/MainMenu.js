@@ -5,31 +5,23 @@ import MenuItems from "./MenuItems";
 import MobileMenu from "./MobileMenu";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-function MainMenu() {
+function MainMenu(props) {
   //React event on screen size change,
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [menuState, setMenuState] = useState(false);
   const [centerMenuButton, setCenterMenuButtons] = useState(false);
-  useEffect(() => {
-    const handleResize = () => setScreenWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+  console.log(props.screenWidthRef[0]);
   useEffect(() => {
-    if (screenWidth < 1440) {
+    if (props.screenWidthRef[0] < 1440) {
       setCenterMenuButtons(true);
       setMenuState(false);
     } else {
       setCenterMenuButtons(false);
     }
-  }, [screenWidth]);
+  }, [props.screenWidthRef[0]]);
 
   const GetMenu = () => {
-    if (screenWidth >= 1440) {
+    if (props.screenWidthRef[0] >= 1440) {
       return <MenuItems />;
     } else {
       //return burger menu
@@ -38,7 +30,7 @@ function MainMenu() {
   };
 
   const GetSocials = () => {
-    if (screenWidth >= 1440) {
+    if (props.screenWidthRef[0] >= 1440) {
       return <SocialMediaIcons />;
     }
   };
@@ -50,7 +42,7 @@ function MainMenu() {
   };
 
   const RenderMenu = () => {
-    if (menuState && screenWidth < 1440) {
+    if (menuState && props.screenWidthRef[0] < 1440) {
       return <MobileMenu />;
     }
   };
