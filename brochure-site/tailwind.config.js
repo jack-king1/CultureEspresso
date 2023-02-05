@@ -14,6 +14,7 @@ module.exports = {
         lobster: ["Lobster", "calibri"],
         rowdies: ["Rowdies", "calibri"],
         elmessiri: ["El Messiri", "calibri"],
+        elite: ["Special Elite", "calibri"],
       },
     },
   },

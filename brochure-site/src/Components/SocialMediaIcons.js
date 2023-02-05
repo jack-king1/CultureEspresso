@@ -8,24 +8,24 @@ function SocialMediaIcons() {
   return (
     <div className="flex items-center flex-1 justify-end">
       <UilFacebook
-        className="hover:cursor-pointer hover:bg-yellow-200"
+        className="hover:cursor-pointer hover:bg-yellow-400"
         size="30"
-        color="#f97316"
+        color="#fff"
       />
       <UilInstagram
-        className="hover:cursor-pointer hover:bg-yellow-200"
+        className="hover:cursor-pointer hover:bg-yellow-400"
         size="30"
-        color="#f97316"
+        color="#fff"
       />
       <UilYoutube
-        className="hover:cursor-pointer hover:bg-yellow-200"
+        className="hover:cursor-pointer hover:bg-yellow-400"
         size="30"
-        color="#f97316"
+        color="#fff"
       />
       <UilEnvelope
-        className="hover:cursor-pointer hover:bg-yellow-200"
+        className="hover:cursor-pointer hover:bg-yellow-400"
         size="30"
-        color="#f97316"
+        color="#fff"
       />
     </div>
   );
