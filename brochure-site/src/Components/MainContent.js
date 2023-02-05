@@ -8,22 +8,35 @@ import UilStar from "@iconscout/react-unicons/icons/uil-star";
 import "../Animations/slideshow.css"; // relative path to image
 
 function MainContent(props) {
+  const [slideshowHeight, setSlideshowHeight] = useState(["32rem"]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const remSizes = ["[32rem]", "[28rem]", "[16rem]", "[8rem]"];
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % 3);
     }, 3000);
     return () => clearInterval(intervalId);
   }, [currentSlide]);
+
+  useEffect(() => {
+    if (props.screenWidthRef[0] > 1240) {
+      setSlideshowHeight(remSizes[0]);
+      console.log("slideshow height: 0");
+    } else if (props.screenWidthRef[0] <= 1240) {
+      setSlideshowHeight(remSizes[1]);
+      console.log("slideshow height: 1");
+    }
+  }, [props.screenWidthRef[0]]);
+
   return (
     //Hero Icon/Banner Image
     <div>
       <img className="w-[100%] mt-8 rounded" src={Banner} alt="chicken" />
       <div className="text-center md:w-[50%] mx-auto mt-12">
-        <h1 className="font-rowdies font-bold mt-8 text-5xl items-center ">
+        <h1 className="font-rowdies font-bold mt-8 text-5xl items-center text-orange-500 ">
           Welcome to Goldenbird!
         </h1>
-        <p className="text-xl mt-12">
+        <p className="text-xl mt-12 text-white">
           We've been serving <b>sizzling hot</b>, <b>succulent</b>,{" "}
           <b>freshly fried golden chicken wings since 1998</b> - our{" "}
           <b>secret recipe of blended herbs and spices</b> means our customers
@@ -41,7 +54,7 @@ function MainContent(props) {
               <UilStar color="gold" size={40} />
               <UilStar color="gold" size={40} />
             </div>
-            <h1 className="text-lg font-bold">
+            <h1 className="text-lg font-bold text-white">
               Join us today for a 5 Star Experience!
             </h1>
           </div>
@@ -49,38 +62,18 @@ function MainContent(props) {
       </div>
       <img className="w-[100%] mt-8 rounded" src={Banner2} alt="chicken" />
       <div className="text-center">
-        <h1 className="font-rowdies font-bold mt-8 text-5xl items-center ">
-          -Menu-
+        <h1 className="font-rowdies font-bold mt-8 text-5xl items-center text-white">
+          Popular Items
         </h1>
-        <div className="hidden md:block md:relative h-[32rem] overflow-hidden">
-          <div className="flex absolute top-0 left-0 w-full">
-            <div className="relative w-full">
-              <div
-                className={`absolute top-0 left-0 w-full h-full min-h-fit  ${
-                  currentSlide === 0 ? "slide-in-left" : "slide-out-right"
-                }`}
-              >
-                <img className="mt-8 rounded" src={Menu0} alt="chicken" />
-              </div>
-              <div
-                className={`absolute top-0 left-0 w-full h-full min-h-fit ${
-                  currentSlide === 1 ? "slide-in-left" : "slide-out-right"
-                }`}
-              >
-                <img className="mt-8 rounded" src={Menu1} alt="chicken" />
-              </div>
-              <div
-                className={`absolute top-0 left-0 w-full h-full min-h-fit ${
-                  currentSlide === 2 ? "slide-in-left" : "slide-out-right"
-                }`}
-              >
-                <img className="mt-8 rounded" src={Menu0} alt="chicken" />
-              </div>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-screen-xl mx-auto">
+          <div className="h-64 bg-gray-300">1</div>
+          <div className="h-64 bg-gray-300">2</div>
+          <div className="h-64 bg-gray-300">3</div>
+          <div className="h-64 bg-gray-300">4</div>
+          <div className="h-64 bg-gray-300 hidden md:block">5</div>
+          <div className="h-64 bg-gray-300 hidden md:block">6</div>
         </div>
       </div>
-      <h1>HELLO WORLD</h1>
     </div>
 
     //Highlighted Menu Items

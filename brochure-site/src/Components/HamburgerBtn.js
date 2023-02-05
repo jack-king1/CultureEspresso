@@ -7,7 +7,7 @@ function HamburgerBtn({ HandleMenuBtn }) {
       <UilBars
         onClick={() => HandleMenuBtn()}
         size="30"
-        className="hover:cursor-pointer"
+        className="text-orange-500 hover:cursor-pointer"
       />
     </div>
   );

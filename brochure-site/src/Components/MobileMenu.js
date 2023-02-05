@@ -6,7 +6,7 @@ function MobileMenu() {
       <li>
         <a
           href="/Home"
-          className=" font-medium text-md px-3 text-slate-700 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
+          className=" font-medium text-md px-3 text-orange-500 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
         >
           Home
         </a>
@@ -14,7 +14,7 @@ function MobileMenu() {
       <li>
         <a
           href="/About"
-          className="font-medium text-md px-3 text-slate-700 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
+          className="font-medium text-md px-3 text-orange-500 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
         >
           About
         </a>
@@ -22,7 +22,7 @@ function MobileMenu() {
       <li>
         <a
           href="/Contact"
-          className="font-medium text-md px-3 text-slate-700 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
+          className="font-medium text-md px-3 text-orange-500 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
         >
           Contact
         </a>
@@ -30,7 +30,7 @@ function MobileMenu() {
       <li>
         <a
           href="/Menu"
-          className="font-medium text-md px-3 text-slate-700 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
+          className="font-medium text-md px-3 text-orange-500 rounded-lg hover:bg-yellow-200 hover:text-slate-900"
         >
           Menu
         </a>

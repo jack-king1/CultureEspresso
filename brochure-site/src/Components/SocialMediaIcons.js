@@ -10,22 +10,22 @@ function SocialMediaIcons() {
       <UilFacebook
         className="hover:cursor-pointer hover:bg-yellow-200"
         size="30"
-        color="#2C2C2C"
+        color="#f97316"
       />
       <UilInstagram
         className="hover:cursor-pointer hover:bg-yellow-200"
         size="30"
-        color="#2C2C2C"
+        color="#f97316"
       />
       <UilYoutube
         className="hover:cursor-pointer hover:bg-yellow-200"
         size="30"
-        color="#2C2C2C"
+        color="#f97316"
       />
       <UilEnvelope
         className="hover:cursor-pointer hover:bg-yellow-200"
         size="30"
-        color="#2C2C2C"
+        color="#f97316"
       />
     </div>
   );

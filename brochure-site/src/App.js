@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-w-md max-w-screen-xl mx-auto">
+    <div className="min-w-md mx-auto">
       <MainMenu
         screenWidthRef={[screenWidthRef, setScreenWidth]}
         className=""

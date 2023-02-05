@@ -10,7 +10,6 @@ function MainMenu(props) {
   const [menuState, setMenuState] = useState(false);
   const [centerMenuButton, setCenterMenuButtons] = useState(false);
 
-  console.log(props.screenWidthRef[0]);
   useEffect(() => {
     if (props.screenWidthRef[0] < 1440) {
       setCenterMenuButtons(true);
@@ -48,7 +47,7 @@ function MainMenu(props) {
   };
 
   return (
-    <div>
+    <div className="">
       <div className="flex mx-auto pt-4 md:justify-between max-w-[90%]">
         <div
           className={
@@ -60,8 +59,8 @@ function MainMenu(props) {
           <h1
             className={
               centerMenuButton
-                ? "text-center text-transparent font-rowdies text-6xl bg-gradient-to-r from-yellow-300 to-orange-400 md:text-7xl bg-clip-text"
-                : "text-center text-transparent font-rowdies text-6xl md:text-7xl md:text-left bg-gradient-to-r from-yellow-300 to-orange-400  bg-clip-text inline-block"
+                ? "text-center text-transparent font-rowdies text-6xl text-orange-500 md:text-7xl"
+                : "text-center text-transparent font-rowdies text-6xl md:text-7xl md:text-left text-orange-500"
             }
           >
             Goldenbird
