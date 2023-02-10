@@ -15,6 +15,13 @@ module.exports = {
         rowdies: ["Rowdies", "calibri"],
         elmessiri: ["El Messiri", "calibri"],
         elite: ["Special Elite", "calibri"],
+        hand: ["Just Another Hand", "calibri"],
+      },
+      colors: {
+        browntrans: "#78350f66",
+      },
+      backgroundImage: {
+        cafeheader: "url('/src/Photos/coffee-shop.jpg')",
       },
     },
   },
