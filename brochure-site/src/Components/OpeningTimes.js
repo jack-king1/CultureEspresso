@@ -9,7 +9,7 @@ function OpeningTimes() {
         <h1 className="md:text-5xl bg-white p-2 text-center mix-blend-screen">
           Opening Times
         </h1>
-        <div className="pt-2 flex flex-col text-white md:text-5xl">
+        <div className="pt-2 flex flex-col text-white md:text-3xl lg:text-5xl">
           <div className="flex justify-between">
             <div>Monday</div>
             <div className="">08:00 - 19:00</div>

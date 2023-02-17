@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+import BrowserDetector from "./Components/BrowserDetector";
 import MainContent from "./Components/MainContent";
 import MainMenu from "./Components/MainMenu";
 
 function App() {
   let [screenWidthRef, setScreenWidth] = useState(window.innerWidth);
+  const [browser, setBrowser] = useState("");
+  function handleDetectBrowser(detectedBrowser) {
+    setBrowser(detectedBrowser);
+  }
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
@@ -16,7 +21,24 @@ function App() {
 
   return (
     <div className="min-w-md mx-auto">
-      <MainMenu screenWidthRef={[screenWidthRef, setScreenWidth]}></MainMenu>
+      <BrowserDetector onDetectBrowser={handleDetectBrowser}>
+        <div>
+          {browser === "Chrome" && <div>You're using Google Chrome!</div>}
+          {browser === "Safari" && <div>You're using Apple Safari!</div>}
+          {browser === "Edge" && <div>You're using Microsoft Edge!</div>}
+          {browser === "Firefox" && <div>You're using Mozilla Firefox!</div>}
+          {browser !== "Chrome" &&
+            browser !== "Safari" &&
+            browser !== "Edge" &&
+            browser !== "Firefox" && (
+              <div>You're using a different browser!</div>
+            )}
+        </div>
+      </BrowserDetector>
+      <MainMenu
+        screenWidthRef={[screenWidthRef, setScreenWidth]}
+        browser={[browser, setBrowser]}
+      ></MainMenu>
       <MainContent screenWidthRef={[screenWidthRef, setScreenWidth]} />
     </div>
   );

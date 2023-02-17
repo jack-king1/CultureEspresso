@@ -16,10 +16,7 @@ function MainMenu(props) {
     const handleScroll = () => {
       if (window.pageYOffset > window.innerHeight * 0.8) {
         setSticky(true);
-        console.log(window.innerHeight);
-        console.log("sticky true");
       } else {
-        console.log("sticky false");
         setSticky(false);
       }
     };
@@ -50,7 +47,7 @@ function MainMenu(props) {
             </div>
             <div className="w-2/5 md:w-1/2 text-center">
               <img src={Logo} alt="Logo" className="px-4" />
-              <SocialMediaIcons size={props} />
+              <SocialMediaIcons size={props} browser={props} />
             </div>
             <div className="text-left md:text-center hover:pointer-cursor">
               <a href="https://www.google.com">About Us</a>
@@ -129,7 +126,6 @@ function MainMenu(props) {
   };
 
   const GetStickyMenu = () => {
-    console.log("sticky should be rendered!");
     //Desktopo
     if (props.screenWidthRef[0] > 768) {
       return (

@@ -21,6 +21,7 @@ module.exports = {
         browntrans: "#78350f66",
         blacktrans: "#00000085",
         trans: "#ffffff00",
+        darkblue: "#000426",
       },
       backgroundImage: {
         cafeheader: "url('/src/Photos/coffee-shop.jpg')",

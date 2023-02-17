@@ -2,9 +2,16 @@ import React from "react";
 import { ReactComponent as AppleDownloadIconFile } from "../Photos/apple-store.svg";
 
 function AppleDownloadIcon() {
+  const OpenNewWindow = () => {
+    window.open("https://www.apple.com/uk/app-store/");
+  };
+
   return (
-    <div className="flex items-center">
-      <AppleDownloadIconFile className=" w-32 md:w-48 h-auto" />
+    <div
+      className="flex items-center hover:cursor-pointer"
+      onClick={() => OpenNewWindow()}
+    >
+      <AppleDownloadIconFile className=" w-48 md:w-64 h-auto" />
     </div>
   );
 }
