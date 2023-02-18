@@ -3,7 +3,7 @@ import UilStar from "@iconscout/react-unicons/icons/uil-star";
 
 function CustomerReviews(props) {
   return (
-    <div className="bg-white h-screen w-screen bg-lime-100 pt-9 flex flex-col">
+    <div className="h-screen w-screen bg-lime-100 pt-9 flex flex-col">
       <div className="mt-9 flex flex-col  justify-around h-full w-[80%] mx-auto">
         <h1 className="text-6xl font-hand text-center mx-auto md:text-8xl">
           What our customers are saying!
