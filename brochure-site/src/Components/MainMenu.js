@@ -43,7 +43,7 @@ function MainMenu(props) {
               <a href="https://www.google.com">Order Now</a>
             </div>
             <div className="text-left md:text-center hover:pointer-cursor">
-              <a href="https://www.google.com">Locations</a>
+              <a href="https://www.google.com">Location</a>
             </div>
             <div className="w-2/5 md:w-1/2 text-center">
               <img src={Logo} alt="Logo" className="px-4" />
@@ -79,7 +79,7 @@ function MainMenu(props) {
               <div className="text-left md:text-center hover:pointer-cursor">
                 <a href="https://www.google.com">Order Now</a>
               </div>
-              <div className="text-left md:text-center">Locations</div>
+              <div className="text-left md:text-center">Location</div>
               <div className="text-right md:text-center">About Us</div>
               <div className="text-right md:text-center">Gift Cards</div>
             </div>
@@ -96,7 +96,7 @@ function MainMenu(props) {
         <div className="bg-blacktrans h-screen w-screen fixed top-0 left-0 flex">
           <ul className="items-center m-auto text-white text-center text-3xl">
             <li className="mb-3">Order Now</li>
-            <li className="mb-3">Locations</li>
+            <li className="mb-3">Location</li>
             <li className="mb-3">About Us</li>
             <li>Gift Cards</li>
           </ul>
@@ -135,7 +135,7 @@ function MainMenu(props) {
               <a>Order Now</a>
             </div>
             <div>
-              <a>Locations</a>
+              <a>Location</a>
             </div>
             <div>
               <a>About Us</a>

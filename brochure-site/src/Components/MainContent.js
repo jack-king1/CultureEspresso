@@ -7,6 +7,8 @@ import CustomerReviews from "./CustomerReviews";
 import OpeningTimes from "./OpeningTimes";
 import DownloadApp from "./DownloadApp";
 import Footer from "./Footer";
+import Gallery from "./Gallery";
+import Map from "./Map";
 
 function MainContent(props) {
   return (
@@ -14,6 +16,8 @@ function MainContent(props) {
       <CustomerReviews props={props} />
       <OpeningTimes />
       <DownloadApp props={props} />
+      <Gallery />
+      <Map />
       <Footer />
     </div>
   );
