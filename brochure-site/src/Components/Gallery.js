@@ -24,7 +24,7 @@ function Gallery() {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4" id="photos">
       {images.map((imageUrl) => (
         <img src={imageUrl} className="w-full h-full object-cover" />
       ))}

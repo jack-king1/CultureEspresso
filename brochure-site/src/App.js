@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="min-w-md mx-auto">
       <BrowserDetector onDetectBrowser={handleDetectBrowser}>
-        <div>
+        {/* <div>
           {browser === "Chrome" && <div>You're using Google Chrome!</div>}
           {browser === "Safari" && <div>You're using Apple Safari!</div>}
           {browser === "Edge" && <div>You're using Microsoft Edge!</div>}
@@ -33,12 +33,8 @@ function App() {
             browser !== "Firefox" && (
               <div>You're using a different browser!</div>
             )}
-        </div>
+        </div> */}
       </BrowserDetector>
-      <MainMenu
-        screenWidthRef={[screenWidthRef, setScreenWidth]}
-        browser={[browser, setBrowser]}
-      ></MainMenu>
       <MainContent screenWidthRef={[screenWidthRef, setScreenWidth]} />
     </div>
   );

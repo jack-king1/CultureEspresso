@@ -4,6 +4,7 @@ import Logo from "../Photos/logo.png";
 import SocialMediaIcons from "./SocialMediaIcons";
 import UilBars from "@iconscout/react-unicons/icons/uil-bars";
 import UilX from "@iconscout/react-unicons/icons/uil-x";
+import { Link } from "react-scroll";
 
 function MainMenu(props) {
   //React event on screen size change,
@@ -11,7 +12,6 @@ function MainMenu(props) {
   const [centerMenuButton, setCenterMenuButtons] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [menuSelected, setMenuSelected] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset > window.innerHeight * 0.8) {
@@ -39,21 +39,57 @@ function MainMenu(props) {
       return (
         <div className="rounded p-4">
           <div className="flex justify-between items-center text-white">
-            <div className="text-left md:text-center hover:pointer-cursor">
-              <a href="https://www.google.com">Order Now</a>
+            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <Link
+                className="hover:pointer-cursor"
+                to="download"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Order Now
+              </Link>
             </div>
-            <div className="text-left md:text-center hover:pointer-cursor">
-              <a href="https://www.google.com">Location</a>
+            <div
+              className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded"
+              onClick={props.handleScrollToLocation}
+            >
+              <Link
+                to="map"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Location
+              </Link>
             </div>
             <div className="w-2/5 md:w-1/2 text-center">
               <img src={Logo} alt="Logo" className="px-4" />
               <SocialMediaIcons size={props} browser={props} />
             </div>
-            <div className="text-left md:text-center hover:pointer-cursor">
-              <a href="https://www.google.com">About Us</a>
+            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <Link
+                to="photos"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Photos
+              </Link>
             </div>
-            <div className="text-left md:text-center hover:pointer-cursor">
-              <a href="https://www.google.com">Gift Cards</a>
+            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <Link
+                to="download"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Gift Cards
+              </Link>
             </div>
           </div>
         </div>
@@ -76,12 +112,50 @@ function MainMenu(props) {
           <SocialMediaIcons size={props} />
           <div className="rounded p-4 mx-auto text-white ">
             <div className="flex justify-between items-center">
-              <div className="text-left md:text-center hover:pointer-cursor">
-                <a href="https://www.google.com">Order Now</a>
+              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+                <Link
+                  to="download"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={1000}
+                >
+                  Order Now
+                </Link>
               </div>
-              <div className="text-left md:text-center">Location</div>
-              <div className="text-right md:text-center">About Us</div>
-              <div className="text-right md:text-center">Gift Cards</div>
+              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+                <Link
+                  to="map"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={1000}
+                >
+                  Location
+                </Link>
+              </div>
+              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+                <Link
+                  to="photos"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={1000}
+                >
+                  Photos
+                </Link>
+              </div>
+              <div className="text-right md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+                <Link
+                  to="download"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={1000}
+                >
+                  Gift Cards
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -95,10 +169,50 @@ function MainMenu(props) {
       return (
         <div className="bg-blacktrans h-screen w-screen fixed top-0 left-0 flex">
           <ul className="items-center m-auto text-white text-center text-3xl">
-            <li className="mb-3">Order Now</li>
-            <li className="mb-3">Location</li>
-            <li className="mb-3">About Us</li>
-            <li>Gift Cards</li>
+            <li className="mb-3">
+              <Link
+                to="download"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Order Now
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link
+                to="map"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Location
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link
+                to="photos"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Photos
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="download"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Gift Cards
+              </Link>
+            </li>
           </ul>
         </div>
       );
@@ -131,17 +245,47 @@ function MainMenu(props) {
       return (
         <div className="fixed p-6 h-16 inset-0 top-0 bg-black drop-shadow-2xl align-middle text-white drop">
           <div className="w-[80%] flex justify-around mx-auto">
+            <Link
+              to="download"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={1000}
+            >
+              Order Now
+            </Link>
             <div>
-              <a>Order Now</a>
+              <Link
+                to="map"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Location
+              </Link>
             </div>
             <div>
-              <a>Location</a>
+              <Link
+                to="photos"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Photos
+              </Link>
             </div>
             <div>
-              <a>About Us</a>
-            </div>
-            <div>
-              <a>Gift Cards</a>
+              <Link
+                to="download"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Gift Cards
+              </Link>
             </div>
           </div>
         </div>

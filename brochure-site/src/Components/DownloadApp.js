@@ -4,7 +4,10 @@ import GoogleDownloadIcon from "./GoogleDownloadIcon";
 
 function DownloadApp(props) {
   return (
-    <div className="h-screen w-full align-middle bg-lime-100 pt-12 my-auto">
+    <div
+      className="h-screen w-full align-middle bg-lime-100 pt-12 my-auto"
+      id="download"
+    >
       <div className="w-[80%] h-full m-auto justify-center flex flex-col">
         <div>
           <h1 className="text-5xl text-wrap font-hand text-center mx-auto md:text-8xl">
