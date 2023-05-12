@@ -169,7 +169,7 @@ function MainMenu(props) {
       return (
         <div className="bg-blacktrans h-screen w-screen fixed top-0 left-0 flex">
           <ul className="items-center m-auto text-white text-center text-3xl">
-            <li className="mb-3">
+            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="download"
                 spy={true}
@@ -180,7 +180,7 @@ function MainMenu(props) {
                 Order Now
               </Link>
             </li>
-            <li className="mb-3">
+            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="map"
                 spy={true}
@@ -191,7 +191,7 @@ function MainMenu(props) {
                 Location
               </Link>
             </li>
-            <li className="mb-3">
+            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="photos"
                 spy={true}
@@ -202,7 +202,7 @@ function MainMenu(props) {
                 Photos
               </Link>
             </li>
-            <li>
+            <li className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="download"
                 spy={true}
@@ -245,16 +245,18 @@ function MainMenu(props) {
       return (
         <div className="fixed p-6 h-16 inset-0 top-0 bg-black drop-shadow-2xl align-middle text-white drop">
           <div className="w-[80%] flex justify-around mx-auto">
-            <Link
-              to="download"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={1000}
-            >
-              Order Now
-            </Link>
-            <div>
+            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <Link
+                to="download"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+              >
+                Order Now
+              </Link>
+            </div>
+            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="map"
                 spy={true}
@@ -265,7 +267,7 @@ function MainMenu(props) {
                 Location
               </Link>
             </div>
-            <div>
+            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="photos"
                 spy={true}
@@ -276,7 +278,7 @@ function MainMenu(props) {
                 Photos
               </Link>
             </div>
-            <div>
+            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
               <Link
                 to="download"
                 spy={true}
