@@ -39,7 +39,7 @@ function MainMenu(props) {
       return (
         <div className="rounded p-4">
           <div className="flex justify-between items-center text-white">
-            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 className="hover:pointer-cursor"
                 to="download"
@@ -52,7 +52,7 @@ function MainMenu(props) {
               </Link>
             </div>
             <div
-              className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded"
+              className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded"
               onClick={props.handleScrollToLocation}
             >
               <Link
@@ -69,7 +69,7 @@ function MainMenu(props) {
               <img src={Logo} alt="Logo" className="px-4" />
               <SocialMediaIcons size={props} browser={props} />
             </div>
-            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="photos"
                 spy={true}
@@ -80,7 +80,7 @@ function MainMenu(props) {
                 Photos
               </Link>
             </div>
-            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="download"
                 spy={true}
@@ -112,7 +112,7 @@ function MainMenu(props) {
           <SocialMediaIcons size={props} />
           <div className="rounded p-4 mx-auto text-white ">
             <div className="flex justify-between items-center">
-              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
                 <Link
                   to="download"
                   spy={true}
@@ -123,7 +123,7 @@ function MainMenu(props) {
                   Order Now
                 </Link>
               </div>
-              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
                 <Link
                   to="map"
                   spy={true}
@@ -134,7 +134,7 @@ function MainMenu(props) {
                   Location
                 </Link>
               </div>
-              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <div className="text-left md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
                 <Link
                   to="photos"
                   spy={true}
@@ -145,7 +145,7 @@ function MainMenu(props) {
                   Photos
                 </Link>
               </div>
-              <div className="text-right md:text-center hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+              <div className="text-right md:text-center hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
                 <Link
                   to="download"
                   spy={true}
@@ -180,7 +180,7 @@ function MainMenu(props) {
                 Order Now
               </Link>
             </li>
-            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="map"
                 spy={true}
@@ -191,7 +191,7 @@ function MainMenu(props) {
                 Location
               </Link>
             </li>
-            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <li className="mb-3 hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="photos"
                 spy={true}
@@ -202,7 +202,7 @@ function MainMenu(props) {
                 Photos
               </Link>
             </li>
-            <li className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <li className="hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="download"
                 spy={true}
@@ -245,7 +245,7 @@ function MainMenu(props) {
       return (
         <div className="fixed p-6 h-16 inset-0 top-0 bg-black drop-shadow-2xl align-middle text-white drop">
           <div className="w-[80%] flex justify-around mx-auto">
-            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="download"
                 spy={true}
@@ -256,7 +256,7 @@ function MainMenu(props) {
                 Order Now
               </Link>
             </div>
-            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="map"
                 spy={true}
@@ -267,7 +267,7 @@ function MainMenu(props) {
                 Location
               </Link>
             </div>
-            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="photos"
                 spy={true}
@@ -278,7 +278,7 @@ function MainMenu(props) {
                 Photos
               </Link>
             </div>
-            <div className="hover:cursor-pointer hover:bg-yellow-700 p-1 rounded">
+            <div className="hover:cursor-pointer hover:bg-yellow-600 p-1 rounded">
               <Link
                 to="download"
                 spy={true}

@@ -5,7 +5,7 @@ import GoogleDownloadIcon from "./GoogleDownloadIcon";
 function DownloadApp(props) {
   return (
     <div
-      className="h-screen w-full align-middle bg-lime-100 pt-12 my-auto"
+      className="h-auto w-full align-middle bg-lime-100 pt-12 my-auto"
       id="download"
     >
       <div className="w-[80%] h-full m-auto justify-center flex flex-col">
@@ -42,7 +42,7 @@ function DownloadApp(props) {
             </p>
           </div>
         </div>
-        <div className="flex mt-12 gap-1 flex-row justify-center md:gap-20">
+        <div className="flex mt-12 gap-1 mb-10 flex-col justify-center md:gap-20 md:flex-row">
           <AppleDownloadIcon />
           <GoogleDownloadIcon />
         </div>

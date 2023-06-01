@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import Gallery from "./Gallery";
 import Map from "./Map";
 import MainMenu from "./MainMenu";
+import Contact from "./Contact";
 
 function MainContent(props) {
   const orderRef = useRef(null);
@@ -39,6 +40,7 @@ function MainContent(props) {
       <DownloadApp props={props} />
       <Gallery />
       <Map />
+      <Contact />
       <Footer />
     </div>
   );
