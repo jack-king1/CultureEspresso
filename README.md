@@ -1,10 +1,10 @@
-# Todooer
-## What is Todooer?
+# Culture Espresso
+## What is Culture Espresso?
 Todooer is a simple todo app. Features include create todo, delete todo and edit todo.
 ![Product Page](https://github.com/jack-king1/WebsiteBrochure_React/blob/main/ReadMePhotos/header.jpg)
 
-## How To Access Todooer?
-Just visit the live URL: [Todooer (CTRL/CMD + Click for new window)](https://todooer.netlify.app/)
+## How To Access Culture Espresso?
+Just visit the live URL: [Todooer (CTRL/CMD + Click for new window)](https://culteureespresso.netlify.app/)
 
 ## Technologies
 1. Javascript, CSS, HTML
