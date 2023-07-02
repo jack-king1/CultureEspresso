@@ -1,7 +1,6 @@
 # Todooer
 ## What is Todooer?
-Tickety is an ECommerce website that sells business customers a solution to displaying products. For example a 
-bakery display.
+Todooer is a simple todo app. Features include create todo, delete todo and edit todo.
 ![Product Page](https://github.com/jack-king1/WebsiteBrochure_React/blob/main/ReadMePhotos/header.jpg)
 
 ## How To Access Todooer?
