@@ -19,7 +19,7 @@ Current Features:
 5. Save to local storage
 
 ## Planned Features
-As i use this todo to develop my other projects as a light weight todo app, with no bloated featues i would like to add the following features.
+As i use Todooer to develop my other projects as a light weight todo app, i would like to add the following features.
 1. Account creation
 2. Save todos on database
 3. Ability to seperate todos into lists
