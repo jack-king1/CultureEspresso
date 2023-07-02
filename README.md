@@ -1,28 +1,17 @@
 # Culture Espresso
 ## What is Culture Espresso?
-Todooer is a simple todo app. Features include create todo, delete todo and edit todo.
+Culture Espresso is a landing page for a urban coffee shop based in london (mock) It hs sections for photos, maps and call to actions.
 ![Product Page](https://github.com/jack-king1/WebsiteBrochure_React/blob/main/ReadMePhotos/header.jpg)
 
 ## How To Access Culture Espresso?
 Just visit the live URL: [Todooer (CTRL/CMD + Click for new window)](https://culteureespresso.netlify.app/)
 
 ## Technologies
-1. Javascript, CSS, HTML
-2. Azure Web Services
-3. Netlify
-
-Current Features:
-1. Create Todos
-2. Delete todos
-3. edit todos
-4. strike through todos/mark as complete.
-5. Save to local storage
-
-## Planned Features
-As i use Todooer to develop my other projects as a light weight todo app, i would like to add the following features.
-1. Account creation
-2. Save todos on database
-3. Ability to seperate todos into lists
-4. View previously completed todos
+1. Tailwind
+2. React
+3. Azure Web Services
+4. Netlify
+5. Map API
+6. Photo API
 
 ![Download App Img](https://github.com/jack-king1/WebsiteBrochure_React/blob/main/ReadMePhotos/download.jpg)
