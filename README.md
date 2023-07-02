@@ -4,7 +4,7 @@ Culture Espresso is a landing page for a urban coffee shop based in london (mock
 ![Product Page](https://github.com/jack-king1/WebsiteBrochure_React/blob/main/ReadMePhotos/header.jpg)
 
 ## How To Access Culture Espresso?
-Just visit the live URL: [Todooer (CTRL/CMD + Click for new window)](https://culteureespresso.netlify.app/)
+Just visit the live URL: [Culture Espresso (CTRL/CMD + Click for new window)](https://culteureespresso.netlify.app/)
 
 ## Technologies
 1. Tailwind
